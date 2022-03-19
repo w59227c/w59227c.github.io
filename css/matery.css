@@ -241,11 +241,11 @@ mark {
 }
 
 .bg-color {
-    background-color: rgba(117, 117, 117, 0.4);
+    background-color: rgba(99, 99, 109, 0.4);
     position: relative;
     box-shadow: 0 5px 15px rgba(20, 20, 20, 0.8);
     align-items: center;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);/*毛玻璃*/
     /*background-image: linear-gradient(to right, #000000 0%, #00ff84 100%);*/
 }
 
@@ -554,12 +554,12 @@ header .go-back i {
 .post-cover {
     height: 40vh !important;
 }
-
-.bg-cover:after {/*
+/*
+.bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
-*/}
-
+}
+*/
 .bg-cover:before,
 .bg-cover:after {
     position: absolute;
@@ -2144,22 +2144,26 @@ footer .copy-right {
     margin: 0;
 }
 
-/*滚动条整体样式,高宽分别对应横竖滚动条的尺寸*/
-.test::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
-    scrollbar-arrow-color:#898989;
+html::-webkit-scrollbar {
+    width: 10px;
 }
-/*滚动条里面小方块*/
-.test::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-    background: rgba(0,0,0,0.2);
-    scrollbar-arrow-color:#898989;
+
+html::-webkit-scrollbar-track {
+    background: rgb(221, 218, 218);
+    border-radius: 10px;
 }
-/*滚动条里面轨道*/
-.test::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-    border-radius: 0;
-    background: rgba(0,0,0,0.1);
+
+html::-webkit-scrollbar-thumb {
+    background: rgb(170, 170, 170);
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 100, 100);
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:active {
+    background: rgb(68, 68, 68);
+    border-radius: 10px;
 }
